@@ -7,7 +7,7 @@ Author: GrayGrids
     //===== Prealoder
 
     window.onload = function () {
-        window.setTimeout(fadeout, 50);
+        window.setTimeout(fadeout, 500);
     }
 
     function fadeout() {

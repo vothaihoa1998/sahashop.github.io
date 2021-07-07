@@ -1620,7 +1620,8 @@ ol {
 }
 
 .header .header-middle {
-  margin-top: 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
