@@ -28,6 +28,43 @@
 
 	<!-- vendor css -->
 	<link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
+	<link href="assets/css/app.css">
+
+	<style>
+		.header-theme{
+			margin: 30px 0;
+		}
+		.header-theme ul {
+			list-style-type: none !important;
+			display: flex;
+			flex-direction: row;
+			justify-content:flex-start;
+			align-items: center;
+}
+
+		.pc-container .card .card-flex {
+   	 		display: flex;
+   	 		flex-direction: column;
+		}
+
+		.header-theme ul li img {
+			vertical-align: middle;
+  			width: 100px;
+  			height: 150px;
+  			border-radius: 10px;
+			  object-fit: cover;
+		}
+
+		.header-theme ul li {
+			margin-right: 200px;
+		}
+
+		
+
+		
+
+
+	</style>
 
 </head>
 
@@ -200,7 +237,7 @@
 						<a  style=" color:#fff; background-color: #D83A56;" onclick="document.getElementById('id01').style.display='block'" 
                         href="index.html"
                         class="pc-head-link active dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        Demo App ngay 
+                        Demo WebSite ngay 
 						</a>
 						
 					</li>
@@ -295,8 +332,8 @@
 		<!-- [ Main Content ] start -->
 		<div class="row mb-3">
 			<div class="col-md-8">
-				<h3>Buttons</h3>
-				<p class="lead">Vui lòng chọn các mẫu buttons cho trang web của bạn.</p>
+				<h3>Cấu hình chính</h3>
+				
 				
 			</div>
 		</div>
@@ -305,20 +342,67 @@
 			<!-- [ default-button ] start -->
 			<div class="col-sm-12">
 				<div class="card">
-					<div class="card-header">
-						<h5>Default</h5>
+					<div class="card-header card-flex" style="border-bottom: none;">
+						<div class="header-theme">
+							<ul>
+								<li style="font-size:25px; font-weight:bold">Color</li>
+								<li style="font-size:16px;">Chọn màu</li>
+								<li><input  type ="color"></li>
+							</ul>
+						</div>
+						<div class="header-theme">
+							<ul>
+								<li style="font-size:25px; font-weight:bold">Logo</li>
+								<li style="font-size:16px;">Thêm logo</li>
+								<li><img src="https://i.pinimg.com/564x/17/41/4a/17414a8fa2d210a1cd784e1def3b6189.jpg"></li>
+							</ul>
+						</div>
+						<div class="header-theme">
+							<ul>
+								<li style="font-size:25px; font-weight:bold">Font</li>
+								<li style="font-size:16px;">Cỡ chữ tiêu đề</li>
+								<!-- <li>
+									<div class="font-style">
+										<section id="select5" >
+											<option value="0">Roboto</option>
+											<option value="1">Lato</option>
+											<option value="2">Uchen</option>
+											<option value="3">Inter</option>
+										</section>
+
+									</div>
+								</li> -->
+								<li>
+									<div class="select-position">
+									<select id="select5">
+										<option value="0">Mặc định</option>
+										<option value="1">Roboto</option>
+										<option value="2">Lato</option>
+										<option value="3">Uchen</option>
+										<option value="3">Inter</option>
+									
+									</select>
+									</div>
+									</li>
+							</ul>
+						</div>
+						<div class="header-theme ">
+							<ul>
+								<button type="button" style="margin-right: 200px;" class="btn  btn-primary">Cập nhập giao diện</button>
+								<button type="button" class="btn  btn-danger"><a style="color:#fff;" href="index.html">Xem Demo WebSite</a></button>
+								<!-- <button type="button" class="btn  btn-info">Xem Demo WebSite</button> -->
+							</ul>
+							<!-- <button type="button" class="btn  btn-success">Success</button>
+							<button type="button" class="btn  btn-danger">Danger</button>
+							<button type="button" class="btn  btn-warning">Warning</button>
+							<button type="button" class="btn  btn-info">Info</button>
+							<button type="button" class="btn  btn-light">Light</button>
+							<button type="button" class="btn  btn-dark">Dark</button>
+							<button type="button" class="btn  btn-link">Link</button> -->
+						</div>
+						
 					</div>
-					<div class="card-body">
-						<button type="button" class="btn  btn-primary">Primary</button>
-						<button type="button" class="btn  btn-secondary">Secondary</button>
-						<button type="button" class="btn  btn-success">Success</button>
-						<button type="button" class="btn  btn-danger">Danger</button>
-						<button type="button" class="btn  btn-warning">Warning</button>
-						<button type="button" class="btn  btn-info">Info</button>
-						<button type="button" class="btn  btn-light">Light</button>
-						<button type="button" class="btn  btn-dark">Dark</button>
-						<button type="button" class="btn  btn-link">Link</button>
-					</div>
+				
 				</div>
 			</div>
 			<!-- [ default-button ] end -->
@@ -326,140 +410,11 @@
 			
 			<!-- [ size-small-button ] end -->
 		</div>
-		<div class="row btn-page">
-			<!-- [ button-icon ] start -->
-			<div class="col-md-6">
-				<div class="card">
-					<div class="card-header">
-						<h5>Button With Icon</h5>
-					</div>
-					<div class="card-body">
-						<button type="button" class="btn btn-primary"><i class="mr-2" data-feather="thumbs-up"></i>Primary</button>
-						<button type="button" class="btn btn-secondary"><i class="mr-2" data-feather="camera"></i>Secondary</button>
-						<button type="button" class="btn btn-success"><i class="mr-2" data-feather="check-circle"></i>Success</button>
-						<button type="button" class="btn btn-danger"><i class="mr-2" data-feather="slash"></i>Danger</button>
-						<button type="button" class="btn btn-warning"><i class="mr-2" data-feather="alert-triangle"></i>Warning</button>
-						<button type="button" class="btn btn-info"><i class="mr-2" data-feather="info"></i>Info</button>
-					</div>
-				</div>
-			</div>
-			<!-- [ button-icon ] end -->
-			<!-- [ button-outline ] start -->
-			<div class="col-md-6">
-				<div class="card">
-					<div class="card-header">
-						<h5>Outline Icon Buttons</h5>
-					</div>
-					<div class="card-body">
-						<button type="button" class="btn btn-outline-primary"><i class="mr-2" data-feather="thumbs-up"></i>Primary</button>
-						<button type="button" class="btn btn-outline-secondary"><i class="mr-2" data-feather="camera"></i>Secondary</button>
-						<button type="button" class="btn btn-outline-success"><i class="mr-2" data-feather="check-circle"></i>Success</button>
-						<button type="button" class="btn btn-outline-danger"><i class="mr-2" data-feather="slash"></i>Danger</button>
-						<button type="button" class="btn btn-outline-warning"><i class="mr-2" data-feather="alert-triangle"></i>Warning</button>
-						<button type="button" class="btn btn-outline-info"><i class="mr-2" data-feather="info"></i>Info</button>
-					</div>
-				</div>
-			</div>
-			<!-- [ button-outline ] end -->
-			<!-- [ only-icon ] start -->
-			
-			<!-- [ outline-icon ] end -->
-		</div>
+		
 		
 	</div>
 
-    <div class="pcoded-content">
-		<!-- [ Main Content ] start -->
-		<div class="row mb-3">
-				<div class="col-md-8">
-					<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Breadcrumb &amp; Pagination</font></font></h3>
-					
-				</div>
-		</div>
-		<div class="row">
-			<!-- [ Breadcrumbs & Pagination ] start -->
-			<div class="col-sm-6">
-				<div class="card">
-					<div class="card-header">
-						<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Breadcrumb</font></font></h5>
-					</div>
-					<div class="card-body">
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item active" aria-current="page"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trang Chủ</font></font></li>
-							</ol>
-						</nav>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trang Chủ</font></font></a></li>
-								<li class="breadcrumb-item active" aria-current="page"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thư viện</font></font></li>
-							</ol>
-						</nav>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trang Chủ</font></font></a></li>
-								<li class="breadcrumb-item"><a href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thư viện</font></font></a></li>
-								<li class="breadcrumb-item active" aria-current="page"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dữ liệu</font></font></li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6">
-				<div class="card">
-					<div class="card-header">
-						<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biểu tượng bánh mì</font></font></h5>
-					</div>
-					<div class="card-body">
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item active" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></li>
-							</ol>
-						</nav>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#!">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a>
-								</li>
-								<li class="breadcrumb-item active" aria-current="page"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thư viện</font></font></li>
-							</ol>
-						</nav>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a></li>
-								<li class="breadcrumb-item"><a href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thư viện</font></font></a></li>
-								<li class="breadcrumb-item active" aria-current="page"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dữ liệu</font></font></li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-12">
-				<div class="card">
-					<div class="card-header">
-						<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phân trang</font></font></h5>
-					</div>
-					<div class="card-body">
-						<nav aria-label="Ví dụ về điều hướng trang">
-							<ul class="pagination">
-								<li class="page-item"><a class="page-link" href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trước</font></font></a></li>
-								<li class="page-item"><a class="page-link" href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a></li>
-								<li class="page-item"><a class="page-link" href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a></li>
-								<li class="page-item"><a class="page-link" href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a></li>
-								<li class="page-item"><a class="page-link" href="#!"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kế tiếp</font></font></a></li>
-							</ul>
-						</nav>
-						<h5 class="mt-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Làm việc với các biểu tượng</font></font></h5>
-						<hr>
-						
-						
-					</div>
-				</div>
-			</div>
-			<!-- [ Breadcrumbs & Pagination ] end -->
-		</div>
-		<!-- [ Main Content ] end -->
-	</div>
+    
 </div>
 
     <!-- Required Js -->
@@ -471,9 +426,7 @@
     <!-- <script src="assets/js/plugins/clipboard.min.js"></script> -->
     <!-- <script src="assets/js/uikit.min.js"></script> -->
 
-<script>
-    $("body").append('<div class="fixed-button active"><a href="https://gumroad.com/dashboardkit" target="_blank" class="btn btn-md btn-success"><i class="material-icons-two-tone text-white">shopping_cart</i> Upgrade To Pro</a> </div>');
-</script>
+
 
 </body>
 
